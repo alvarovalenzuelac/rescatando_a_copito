@@ -83,3 +83,8 @@ motion_mirroring = Vector2(1920, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Capa10"]
 texture = ExtResource("10_c8tmx")
 centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1080, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]

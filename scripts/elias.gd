@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	update_animations(direction)
-	position.x = clamp(position.x, 0, screen_size.x)
+	#position.x = clamp(position.x, 0, screen_size.x)
 
 	var vertical_speed_before := velocity.y
 
