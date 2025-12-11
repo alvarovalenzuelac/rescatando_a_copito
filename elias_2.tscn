@@ -1,0 +1,115 @@
+[gd_scene load_steps=19 format=3 uid="uid://ky34rjipsa07"]
+
+[ext_resource type="Script" uid="uid://dlgpt70473qtr" path="res://elias_2.gd" id="1_6mfa1"]
+[ext_resource type="Texture2D" uid="uid://cktryejjw4fip" path="res://elias/sprites/frame_000.png" id="2_q2mdn"]
+[ext_resource type="Texture2D" uid="uid://vs0lw7gr3omh" path="res://elias/sprites/frame_001.png" id="3_4l4jt"]
+[ext_resource type="Texture2D" uid="uid://vlk24ww4lm2t" path="res://elias/sprites/frame_002.png" id="4_uj8sm"]
+[ext_resource type="Texture2D" uid="uid://0kvt2qd5gckf" path="res://elias/sprites/frame_003.png" id="5_1m014"]
+[ext_resource type="Texture2D" uid="uid://c5otppoyu16h8" path="res://elias/sprites/elias_salto_0.png" id="6_56esr"]
+[ext_resource type="Texture2D" uid="uid://c3ghs12wfu8p0" path="res://elias/sprites/elias_salto_3.png" id="9_v85yb"]
+[ext_resource type="Texture2D" uid="uid://dy3h2hmj6fcnh" path="res://elias/sprites/elias_salto_4.png" id="10_n6nhp"]
+[ext_resource type="Texture2D" uid="uid://c3de4oxk1d7me" path="res://elias/sprites/elias_salto_5.png" id="11_mrwtp"]
+[ext_resource type="Texture2D" uid="uid://doa7sphy7kihj" path="res://elias/sprites/elias_salto_6.png" id="12_c1fbl"]
+[ext_resource type="Texture2D" uid="uid://crd40cdege2mv" path="res://elias/sprites/saltar2.png" id="12_ecujs"]
+[ext_resource type="Texture2D" uid="uid://cckifopug8on2" path="res://elias/sprites/elias_salto_7.png" id="13_d1mh4"]
+[ext_resource type="AudioStream" uid="uid://t7ph11dwbsow" path="res://audio/Footsteps_Rock_Jump_Start_01.wav" id="13_e0b2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0b2r"]
+atlas = ExtResource("12_ecujs")
+region = Rect2(0, 0, 188, 343)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0le"]
+atlas = ExtResource("12_ecujs")
+region = Rect2(0, 343, 188, 343)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v85yb"]
+atlas = ExtResource("12_ecujs")
+region = Rect2(188, 343, 188, 343)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3agfr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q2mdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4l4jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uj8sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1m014")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_56esr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v85yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n6nhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mrwtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_c1fbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d1mh4")
+}],
+"loop": true,
+"name": &"saltar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0b2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi0le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v85yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0b2r")
+}],
+"loop": true,
+"name": &"saltar2",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aktvi"]
+radius = 54.0
+height = 250.0
+
+[node name="elias_2" type="CharacterBody2D"]
+position = Vector2(461, 370)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_6mfa1")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3agfr")
+animation = &"saltar2"
+frame_progress = 0.7981414
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_aktvi")
+
+[node name="SfxSalto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_e0b2r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = -1000
+limit_right = 1500
+limit_bottom = 2000
+position_smoothing_enabled = true

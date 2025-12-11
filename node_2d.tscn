@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://bih4xvm3bhfj4"]
+
+[ext_resource type="PackedScene" uid="uid://c6v5w8v73jdso" path="res://suelo.tscn" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://b7jpjxmvtrx2x" path="res://main.gd" id="1_kdubu"]
+[ext_resource type="PackedScene" uid="uid://ky34rjipsa07" path="res://elias_2.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://vi0h675yy7kg" path="res://plataforma.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://c2ww83inkxipn" path="res://basic_green/fondo.tscn" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://brvtmym1lk2u6" path="res://audio_fondo.tscn" id="5_q6r6c"]
+
+[sub_resource type="FontVariation" id="FontVariation_kdubu"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_kdubu")
+plataforma_scene = ExtResource("3_epypp")
+
+[node name="suelo" parent="." instance=ExtResource("1_0e48y")]
+
+[node name="elias_2" parent="." instance=ExtResource("2_epypp")]
+position = Vector2(260, 615)
+
+[node name="plataforma" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(541.99994, 568.99994)
+
+[node name="Node2D" parent="." instance=ExtResource("4_0hol4")]
+
+[node name="audio_fondo" parent="." instance=ExtResource("5_q6r6c")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 2
+
+[node name="BarraVida" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.326
+anchor_right = 0.63600004
+anchor_bottom = 0.025
+offset_left = -11.080017
+offset_right = 0.11993408
+offset_bottom = 18.0
+grow_horizontal = 2
+value = 100.0
+
+[node name="GameOverScreen" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.072842635, 0.072842635, 0.072842635, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -192.0
+offset_right = 335.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_kdubu")
+theme_override_font_sizes/font_size = 35
+text = "HAS MUERTO CAUSITAAAAA!!!"
+
+[node name="Button" type="Button" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = 268.0
+offset_right = 151.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.95799476, 0.7374043, 0.16132545, 1)
+theme_override_font_sizes/font_size = 25
+text = "INTENTALO OTRA VEZ CAUSA"

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnl6xpwutpbin"]
+
+[ext_resource type="Script" uid="uid://ce0ocsmla18pw" path="res://elias.gd" id="1_co2qv"]
+[ext_resource type="Texture2D" uid="uid://cktryejjw4fip" path="res://elias/sprites/frame_000.png" id="2_ugvdw"]
+[ext_resource type="Texture2D" uid="uid://vs0lw7gr3omh" path="res://elias/sprites/frame_001.png" id="3_jcknd"]
+[ext_resource type="Texture2D" uid="uid://vlk24ww4lm2t" path="res://elias/sprites/frame_002.png" id="4_wvjti"]
+[ext_resource type="Texture2D" uid="uid://0kvt2qd5gckf" path="res://elias/sprites/frame_003.png" id="5_ojqxa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dk87q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ugvdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jcknd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wvjti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ojqxa")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m23ra"]
+radius = 66.0
+height = 256.0
+
+[node name="elias" type="Area2D"]
+position = Vector2(354, 345)
+script = ExtResource("1_co2qv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dk87q")
+animation = &"caminar"
+frame = 3
+frame_progress = 0.76997846
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_m23ra")
