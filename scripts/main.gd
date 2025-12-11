@@ -5,7 +5,7 @@ extends Node
 var pantalla_size
 var altura_actual: float = 0.0    # altura de la última plataforma
 
-@onready var player: Node = $elias_2
+@onready var player: Node = $elias
 @onready var health_bar: ProgressBar = $CanvasLayer/BarraVida
 @onready var game_over_screen: Control = $CanvasLayer/GameOverScreen
 @onready var retry_button: Button = $CanvasLayer/GameOverScreen/Button

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://gtik06pgyrh1"]
+
+[ext_resource type="PackedScene" uid="uid://cbyg4xhco6wbe" path="res://escenas/objetos/suelo_bosque.tscn" id="1_2b3vx"]
+[ext_resource type="PackedScene" uid="uid://ky34rjipsa07" path="res://escenas/personajes/elias.tscn" id="2_isb4j"]
+[ext_resource type="PackedScene" uid="uid://bf2qfqjep3agu" path="res://escenas/objetos/fondo_bosque.tscn" id="2_ydbgc"]
+
+[node name="nivel_0" type="Node2D"]
+
+[node name="elias" parent="." instance=ExtResource("2_isb4j")]
+position = Vector2(907, 712)
+
+[node name="Camera2D" parent="elias" index="3"]
+limit_top = 0
+limit_right = 5000
+limit_bottom = 1080
+
+[node name="fondoBosque" parent="." instance=ExtResource("2_ydbgc")]
+
+[node name="SueloBosque" parent="." instance=ExtResource("1_2b3vx")]
+
+[editable path="elias"]

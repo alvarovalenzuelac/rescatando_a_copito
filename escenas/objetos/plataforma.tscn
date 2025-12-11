@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://vi0h675yy7kg"]
 
-[ext_resource type="Texture2D" uid="uid://uqv6inc6yqew" path="res://basic_green/SnowTilemap .png" id="1_bon5w"]
+[ext_resource type="Texture2D" uid="uid://uqv6inc6yqew" path="res://assets/tilesets/SnowTilemap .png" id="1_bon5w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v4vm"]
 resource_name = "snow"

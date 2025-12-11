@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://bf2qfqjep3agu"]
+
+[ext_resource type="Texture2D" uid="uid://bwe1nm02b61t8" path="res://assets/parallax/forest/10_Sky.png" id="1_oqlgi"]
+[ext_resource type="Texture2D" uid="uid://v8advtf1bb1d" path="res://assets/parallax/forest/09_Forest.png" id="2_pyiy4"]
+[ext_resource type="Texture2D" uid="uid://ioi1u88rlaqe" path="res://assets/parallax/forest/08_Forest.png" id="3_5egsx"]
+[ext_resource type="Texture2D" uid="uid://b8hwir6sxxofx" path="res://assets/parallax/forest/07_Forest.png" id="4_s3vkh"]
+[ext_resource type="Texture2D" uid="uid://6lvtjwxs1tne" path="res://assets/parallax/forest/06_Forest.png" id="5_wvwvp"]
+[ext_resource type="Texture2D" uid="uid://eqgw0jderfeu" path="res://assets/parallax/forest/05_Particles.png" id="6_bc6je"]
+[ext_resource type="Texture2D" uid="uid://dv8bjc8jgqpvb" path="res://assets/parallax/forest/04_Forest.png" id="7_nmodq"]
+[ext_resource type="Texture2D" uid="uid://l62cgqkj5mfr" path="res://assets/parallax/forest/03_Particles.png" id="8_u0dd0"]
+[ext_resource type="Texture2D" uid="uid://dp86ils2wjpha" path="res://assets/parallax/forest/02_Bushes.png" id="9_j7c52"]
+[ext_resource type="Texture2D" uid="uid://2mm7brxlp3uu" path="res://assets/parallax/forest/01_Mist.png" id="10_c8tmx"]
+
+[node name="fondoBosque" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="Capa1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa1"]
+texture = ExtResource("1_oqlgi")
+centered = false
+
+[node name="Capa2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa2"]
+texture = ExtResource("2_pyiy4")
+centered = false
+
+[node name="Capa3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa3"]
+texture = ExtResource("3_5egsx")
+centered = false
+
+[node name="Capa4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa4"]
+texture = ExtResource("4_s3vkh")
+centered = false
+
+[node name="Capa5" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa5"]
+texture = ExtResource("5_wvwvp")
+centered = false
+
+[node name="Capa6" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa6"]
+texture = ExtResource("6_bc6je")
+centered = false
+
+[node name="Capa7" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa7"]
+texture = ExtResource("7_nmodq")
+centered = false
+
+[node name="Capa8" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa8"]
+texture = ExtResource("8_u0dd0")
+centered = false
+
+[node name="Capa9" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa9"]
+texture = ExtResource("9_j7c52")
+centered = false
+
+[node name="Capa10" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Capa10"]
+texture = ExtResource("10_c8tmx")
+centered = false
