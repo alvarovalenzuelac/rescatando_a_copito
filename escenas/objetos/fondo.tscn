@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2ww83inkxipn"]
 
-[ext_resource type="Texture2D" uid="uid://yekxhcakwsgt" path="res://fondo1/fondo2.png" id="1_46imh"]
+[ext_resource type="Texture2D" uid="uid://yekxhcakwsgt" path="res://assets/sprites/backgrounds/fondo2.png" id="1_46imh"]
 
 [node name="Node2D" type="ParallaxBackground"]
 

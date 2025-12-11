@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bih4xvm3bhfj4"]
 
-[ext_resource type="PackedScene" uid="uid://c6v5w8v73jdso" path="res://suelo.tscn" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://b7jpjxmvtrx2x" path="res://main.gd" id="1_kdubu"]
-[ext_resource type="PackedScene" uid="uid://ky34rjipsa07" path="res://elias_2.tscn" id="2_epypp"]
-[ext_resource type="PackedScene" uid="uid://vi0h675yy7kg" path="res://plataforma.tscn" id="3_epypp"]
-[ext_resource type="PackedScene" uid="uid://c2ww83inkxipn" path="res://basic_green/fondo.tscn" id="4_0hol4"]
-[ext_resource type="PackedScene" uid="uid://brvtmym1lk2u6" path="res://audio_fondo.tscn" id="5_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://c6v5w8v73jdso" path="res://escenas/objetos/suelo.tscn" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://b7jpjxmvtrx2x" path="res://scripts/main.gd" id="1_kdubu"]
+[ext_resource type="PackedScene" uid="uid://ky34rjipsa07" path="res://escenas/personajes/elias.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://vi0h675yy7kg" path="res://escenas/objetos/plataforma.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://c2ww83inkxipn" path="res://escenas/objetos/fondo.tscn" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://brvtmym1lk2u6" path="res://escenas/objetos/audio_fondo.tscn" id="5_q6r6c"]
 
 [sub_resource type="FontVariation" id="FontVariation_kdubu"]
 

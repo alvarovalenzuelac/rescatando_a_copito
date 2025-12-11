@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://brvtmym1lk2u6"]
 
-[ext_resource type="AudioStream" uid="uid://ijinans1a22q" path="res://audio/Ambiance_Wind_Calm_Loop_Stereo.wav" id="1_k25v5"]
+[ext_resource type="AudioStream" uid="uid://ijinans1a22q" path="res://assets/audio/music/Ambiance_Wind_Calm_Loop_Stereo.wav" id="1_k25v5"]
 
 [node name="audio_fondo" type="AudioStreamPlayer"]
 stream = ExtResource("1_k25v5")
