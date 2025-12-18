@@ -632,9 +632,10 @@ sources/2 = SubResource("TileSetAtlasSource_5d0hn")
 position = Vector2(277.00003, 984)
 
 [node name="Camera2D" parent="elias" index="3"]
-limit_top = 0
-limit_right = 5000
-limit_bottom = 1080
+limit_left = 13
+limit_top = -1928
+limit_right = 1513
+limit_bottom = 1072
 
 [node name="fondoBosque" parent="." instance=ExtResource("2_5d0hn")]
 
