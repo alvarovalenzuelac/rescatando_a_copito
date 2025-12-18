@@ -648,6 +648,7 @@ tile_map_data = PackedByteArray("AAAAAEEAAgALABYAAAABAEEAAgALABYAAAACAEEAAgALABY
 tile_set = SubResource("TileSet_i72m1")
 
 [node name="EnemigoArbol" parent="." instance=ExtResource("4_5d0hn")]
-position = Vector2(1800.0001, 787)
+position = Vector2(1720, 904.00006)
+scale = Vector2(0.495, 0.495)
 
 [editable path="elias"]

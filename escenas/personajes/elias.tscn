@@ -90,7 +90,7 @@ animations = [{
 radius = 54.0
 height = 250.0
 
-[node name="elias" type="CharacterBody2D"]
+[node name="elias" type="CharacterBody2D" groups=["jugador"]]
 position = Vector2(461, 370)
 scale = Vector2(0.4, 0.4)
 script = ExtResource("1_jpkm5")
